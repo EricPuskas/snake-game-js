@@ -36,9 +36,10 @@ const isFoodItem = (x, y) => {
 };
 
 const moveSnake = () => {
-  const [head] = snake.slice(-1);
+  const [head] = snake.slice(-1)
   const xSum = head.x + currentDirection.x;
   const ySum = head.y + currentDirection.y;
+  
 
   if (xSum < 0 || xSum >= 10 || ySum < 0 || ySum >= 10) {
     return BOARD_LOCATION.OUTSIDE;
@@ -98,7 +99,7 @@ const arrowPressedHandler = (event) => {
   }
 };
 
-const game = () => {
+const startGame = () => {
   createBoardItems();
 
   document.addEventListener("keydown", arrowPressedHandler);
@@ -114,9 +115,9 @@ const game = () => {
     if (boardLocation === BOARD_LOCATION.FOOD_FOUND) {
       showRandomFood();
     }
-  }, 150);
+  }, 250);
 
   showRandomFood();
 };
 
-game();
+startGame();
