@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  border: 1px solid black;
+  width: 40%;
+  aspect-ratio: 1/1;
+}
+
+.board > div {
+  border: 1px solid black;
+}
+
+.snakeColor {
+  background-color: red;
+}
+
+.food {
+  background-color: green;
+}
